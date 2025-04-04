@@ -4,6 +4,17 @@
 
 @layer base {
   :root {
+    /* Resume colors */
+    --resume-background: #FFF;
+    --resume-headings: #050A17;
+    --resume-subheadings: #080B14;
+    --resume-subdetails: #54575e;
+    --resume-subdetailsBg: #eeeff0;
+    --resume-paragraphs: #6c737f;
+    --resume-skillsBg: #494E5C;
+    --resume-skillsText: #fff;
+
+    /* Default theme colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -33,6 +44,18 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+  }
+
+  /* Ghibli theme */
+  [data-theme='ghibli'] {
+    --resume-background: #f1e7cd;  
+    --resume-headings: #4A3C2A;    
+    --resume-subheadings: #7A9A8A; 
+    --resume-subdetails: #7A9B8A;  
+    --resume-subdetailsBg: #E5F1FF; 
+    --resume-paragraphs: #6B5B4A;  
+    --resume-skillsBg: #FF6B6B;    
+    --resume-skillsText: #FFFFFF;  
   }
 
   .dark {

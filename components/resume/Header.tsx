@@ -19,7 +19,12 @@ interface SocialButtonProps {
 
 function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
   return (
-    <Button className="size-8" variant="outline" size="icon" asChild>
+    <Button
+      className="size-8 hover:text-resume-subheadings/90 print:hidden"
+      variant="outline"
+      size="icon"
+      asChild
+    >
       <a
         href={
           href.startsWith('mailto:') || href.startsWith('tel:')
@@ -69,11 +74,14 @@ export function Header({
   return (
     <header className="flex items-start md:items-center justify-between gap-4 ">
       <div className="flex-1 space-y-1.5">
-        <h1 className="text-2xl font-bold" id="resume-name">
+        <h1
+          className="text-2xl font-bold text-resume-headings"
+          id="resume-name"
+        >
           {header.name}
         </h1>
         <p
-          className="max-w-md text-pretty font-mono text-sm text-design-resume print:text-[12px]"
+          className="max-w-md text-pretty font-mono text-sm text-resume-paragraphs print:text-[12px]"
           aria-labelledby="resume-name"
         >
           {header.shortAbout}
@@ -81,9 +89,9 @@ export function Header({
 
         <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
           <a
-            className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline text-[#9CA0A8]"
+            className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline text-resume-subdetails"
             href={`https://www.google.com/maps/search/${encodeURIComponent(
-              header.location,
+              header.location
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -94,7 +102,7 @@ export function Header({
         </p>
 
         <div
-          className="flex gap-x-1 pt-1 font-mono text-sm text-design-resume print:hidden"
+          className="flex gap-x-1 pt-1 font-mono text-sm text-resume-subdetails"
           role="list"
           aria-label="Contact links"
         >
@@ -135,7 +143,7 @@ export function Header({
         </div>
 
         <div
-          className="hidden gap-x-2 font-mono text-sm text-design-resume print:flex print:text-[12px]"
+          className="hidden gap-x-2 font-mono text-sm text-resume-paragraphs print:flex print:text-[12px]"
           aria-label="Print contact information"
         >
           {website && (

@@ -11,6 +11,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        resume: {
+          background: 'var(--resume-background)',
+          headings: 'var(--resume-headings)',
+          subheadings: 'var(--resume-subheadings)',
+          subdetails: 'var(--resume-subdetails)',
+          subdetailsBg: 'var(--resume-subdetailsBg)',
+          paragraphs: 'var(--resume-paragraphs)',
+          skillsBg: 'var(--resume-skillsBg)',
+          skillsText: 'var(--resume-skillsText)',
+        },
         design: {
           black: '#1f1f1f',
           white: '#ffffff',

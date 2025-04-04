@@ -16,7 +16,10 @@ interface SkillsProps {
 export function Skills({ skills, className }: SkillsProps) {
   return (
     <Section className={className}>
-      <h2 className="text-xl font-bold" id="skills-section">
+      <h2
+        className="text-xl font-bold text-resume-headings"
+        id="skills-section"
+      >
         Skills
       </h2>
       <ul
@@ -27,7 +30,7 @@ export function Skills({ skills, className }: SkillsProps) {
         {skills.map((skill) => (
           <li key={skill}>
             <Badge
-              className="print:text-[10px] pointer-events-none"
+              className="print:text-[10px] pointer-events-none bg-resume-skillsBg text-resume-skillsText"
               aria-label={`Skill: ${skill}`}
             >
               {skill}

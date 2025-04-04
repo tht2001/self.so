@@ -77,7 +77,7 @@ export default async function ProfilePage({
   };
 
   return (
-    <>
+    <div className="bg-resume-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -92,14 +92,12 @@ export default async function ProfilePage({
       <div className="text-center mt-8 mb-4">
         <Link
           href={`/?ref=${username}`}
-          className="text-design-gray font-mono text-sm"
+          className={`text-resume-paragraphs font-mono text-sm`}
         >
           Made by{' '}
-          <span className="text-design-black underline underline-offset-2">
-            Self.so
-          </span>
+          <span className={`underline underline-offset-2`}>Self.so</span>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

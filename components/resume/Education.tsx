@@ -62,7 +62,10 @@ export function Education({
 }) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="education-section">
+      <h2
+        className="text-xl font-bold text-resume-headings"
+        id="education-section"
+      >
         Education
       </h2>
       <div
