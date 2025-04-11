@@ -111,6 +111,62 @@ export const EditResume = ({
             />
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-2">
+            <div className="flex flex-col gap-2">
+              <Label
+                htmlFor="email"
+                className="text-sm font-medium text-gray-700"
+              >
+                Email
+              </Label>
+              <Input
+                type="email"
+                id="email"
+                value={resume?.header?.contacts?.email || ''}
+                onChange={(e) => {
+                  onChangeResume({
+                    ...resume,
+                    header: {
+                      ...resume.header,
+                      contacts: {
+                        ...resume.header.contacts,
+                        email: e.target.value,
+                      },
+                    },
+                  });
+                }}
+                placeholder="Your email address"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <Label
+                htmlFor="phone"
+                className="text-sm font-medium text-gray-700"
+              >
+                Phone Number
+              </Label>
+              <Input
+                type="tel"
+                id="phone"
+                value={resume?.header?.contacts?.phone || ''}
+                onChange={(e) => {
+                  onChangeResume({
+                    ...resume,
+                    header: {
+                      ...resume.header,
+                      contacts: {
+                        ...resume.header.contacts,
+                        phone: e.target.value,
+                      },
+                    },
+                  });
+                }}
+                placeholder="Your phone number"
+              />
+            </div>
+          </div>
+
           <div className="flex flex-col gap-2 col-span-2">
             <Label className="text-sm font-medium text-gray-700">
               Social Links
