@@ -19,6 +19,7 @@ export const generateResumeObject = async (resumeText: string) => {
       model: togetherai('Qwen/Qwen2.5-72B-Instruct-Turbo'),
       maxRetries: 1,
       schema: ResumeDataSchema,
+      mode: 'json',
       prompt:
         dedent(`You are an expert resume writer. Generate a resume object from the following resume text. Be professional and concise.
     ## Instructions:
